@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IoT LED Control</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>IoT LED Controller</h1>
+    <div class="control-panel">
+      <h2>LED 상태 제어</h2>
+      <img id="img" src="ledOff.png" width="200" height="200" style="margin: 10px 0">
+      <div class="button-group">
+        <button class="btn on" onclick="ledOn()">LED ON</button>
+        <button class="btn off" onclick="ledOff()">LED OFF</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
