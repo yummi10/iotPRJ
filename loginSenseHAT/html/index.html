@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT LED 제어 로그인</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="login-image">
+      <img src="../login.png" alt="로그인 이미지" />
+    </div>
+
+    <div class="login-box">
+      <h2>IoT LED 제어 로그인</h2>
+      <form id="login-form" onsubmit="login(); return false;">
+        <input type="email" id="email" placeholder="이메일 입력" autocomplete="off" required />
+        <input type="password" id="password" placeholder="비밀번호 입력" autocomplete="off" required />
+        <button type="submit">로그인</button>
+      </form>
+      <p id="login-msg"></p>
+    </div>
+  </div>
+
+  <script src="../js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT 센서 대시보드</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <h1>📡 센서 정보</h1>
+
+    <div class="card">
+      🌡️ <strong>온도:</strong> <span id="temp">--</span> ℃
+    </div>
+    <div class="card">
+      💧 <strong>습도:</strong> <span id="hum">--</span> %
+    </div>
+    <div class="card">
+      🌬️ <strong>기압:</strong> <span id="press">--</span> hPa
+    </div>
+    <div class="card">
+      🎯 <strong>기울기:</strong>
+      Pitch: <span id="pitch">--</span>° / Roll: <span id="roll">--</span>° / Yaw: <span id="yaw">--</span>°
+    </div>
+    <div class="card">
+      🏃 <strong>가속도:</strong>
+      X: <span id="ax">--</span> / Y: <span id="ay">--</span> / Z: <span id="az">--</span>
+    </div>
+    <div class="card">
+      🕒 <strong>최근 업데이트:</strong> <span id="updated">--</span>
+    </div>
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/chart.js"></script>
+
+</body>
+
+</html>
