@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT 센서 대시보드</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+    <h1>📡 IoT 센서 데이터</h1>
+
+    <!-- 내 데이터 카드 -->
+    <div class="card">
+      <strong>온도</strong> <span id="temp">-- ℃</span>
+    </div>
+    <div class="card">
+      <strong>습도</strong> <span id="hum">-- %</span>
+    </div>
+    <div class="card">
+      <strong>기압</strong> <span id="press">-- hPa</span>
+    </div>
+    <div class="card">
+      <strong>기울기 (Pitch / Roll / Yaw)</strong>
+      <span><span id="pitch">--</span>° / <span id="roll">--</span>° / <span id="yaw">--</span>°</span>
+    </div>
+    <div class="card">
+      <strong>가속도 (X / Y / Z)</strong>
+      <span><span id="ax">--</span>g / <span id="ay">--</span>g / <span id="az">--</span>g</span>
+    </div>
+    <div class="card">
+      <strong>최근 업데이트</strong> <span id="updated">--</span>
+    </div>
+
+    <!-- 메시지 전송 -->
+    <div class="message-form">
+      <input type="text" id="messageInput" placeholder="Sense HAT에 보낼 메시지를 입력하세요" />
+      <button id="sendMessageBtn">메시지 전송</button>
+    </div>
+
+    <!-- 전체 학생 테이블 -->
+    <h2 style="margin-top: 2rem;">모든 학생 센서 데이터</h2>
+    <table class="student-table">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>온도 (℃)</th>
+          <th>습도 (%)</th>
+          <th>기압 (hPa)</th>
+          <th>기울기 (X / Y / Z)</th>
+          <th>가속도 (X / Y / Z)</th>
+          <th>업데이트 시간</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody">
+      </tbody>
+    </table>
+
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

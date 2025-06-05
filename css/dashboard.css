@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dashboard {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  width: 90%;
+  max-width: 850px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 1rem 1.3rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  line-height: 1.4;
+}
+
+.card strong {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.card span {
+  font-weight: 500;
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 1.5rem;
+  }
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(3px, 0); }
+  50% { transform: translate(-3px, 0); }
+  75% { transform: translate(3px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+.vibrate {
+  animation: shake 0.3s;
+}
+
+/* 메시지 입력 스타일 */
+#messageInput {
+  width: 70%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+#sendMessageBtn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #f39c12;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+#sendMessageBtn:hover {
+  background-color: #e67e22;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.student-table th, .student-table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.student-table th {
+  background-color: #f39c12;
+  color: white;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.student-table th, .student-table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.student-table th {
+  background-color: #f39c12;
+  color: white;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
