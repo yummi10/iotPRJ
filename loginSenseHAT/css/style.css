@@ -1,102 +1,61 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #fdfcfb, #fbbd61);
+  background: linear-gradient(135deg, #ffcc70, #ffafbd);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .login-container {
-  display: flex;
-  flex-direction: row;
-  background: #fff9f2;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 90%;
-  max-width: 880px;
-}
-
-.login-image {
-  flex: 1;
-  background: #fef5ea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
   padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
 }
 
-.login-image img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.login-box {
-  flex: 1;
-  padding: 2.5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.login-box h2 {
-  font-size: 1.5rem;
+.login-container h2 {
+  font-size: 1.8rem;
   color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.login-container input {
+  width: 90%;
+  padding: 0.8rem;
   margin-bottom: 1rem;
-}
-
-/* ✅ input & button 크기 통일 */
-.login-box input,
-.login-box button {
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-
-.login-box input {
-  padding: 0.9rem;
-  border: 1px solid #ccc;
   border-radius: 10px;
+  border: 1px solid #ccc;
   font-size: 1rem;
+  outline: none;
 }
 
-.login-box button {
-  padding: 0.9rem;
-  background-color: #f39c12;
+.login-container button {
+  width: 95%;
+  padding: 0.8rem;
   border: none;
   border-radius: 10px;
+  background-color: #f39c12;
   color: white;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 }
 
-.login-box button:hover {
+.login-container button:hover {
   background-color: #e67e22;
-  transform: translateY(-2px);
 }
 
-#login-msg {
-  color: red;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .login-container {
-    flex-direction: column;
-  }
-
-  .login-image {
-    padding: 1rem;
-  }
-
-  .login-box {
-    padding: 2rem 1.5rem;
-  }
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
